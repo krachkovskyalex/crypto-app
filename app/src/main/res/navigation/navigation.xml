@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/navigation"
+    app:startDestination="@id/cryptoListFragment">
+
+    <fragment
+        android:id="@+id/cryptoListFragment"
+        android:name="com.krachkovsky.cryptoapp.ui.CryptoListFragment"
+        android:label="CryptoListFragment" >
+        <action
+            android:id="@+id/action_cryptoListFragment_to_coinDetailsFragment"
+            app:destination="@id/coinDetailsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/coinDetailsFragment"
+        android:name="com.krachkovsky.cryptoapp.ui.CoinDetailsFragment"
+        android:label="CoinDetailsFragment" >
+
+        <argument
+            android:name="fromSym"
+            app:argType="string" />
+    </fragment>
+</navigation>

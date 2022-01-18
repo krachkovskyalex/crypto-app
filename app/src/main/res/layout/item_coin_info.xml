@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="4dp"
+    app:cardUseCompatPadding="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_symbols"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            tools:text="BTC / USD"
+            android:padding="10dp" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1757.22555"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_symbols"
+            app:layout_constraintStart_toStartOf="@id/tv_symbols"
+            app:layout_constraintEnd_toEndOf="@+id/tv_symbols"/>
+
+        <TextView
+            android:id="@+id/tv_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="CCCAGG"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_price"
+            app:layout_constraintStart_toStartOf="@id/tv_symbols"
+            app:layout_constraintEnd_toStartOf="@+id/tv_last_market"/>
+
+        <TextView
+            android:id="@+id/tv_last_market"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="Bitfinex"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_price"
+            app:layout_constraintStart_toEndOf="@id/tv_market"
+            app:layout_constraintEnd_toStartOf="@+id/tv_last_update"/>
+
+        <TextView
+            android:id="@+id/tv_last_update"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="1641480763"
+            android:layout_margin="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tv_price"
+            app:layout_constraintStart_toEndOf="@id/tv_last_market"
+            app:layout_constraintEnd_toEndOf="@+id/tv_symbols"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
